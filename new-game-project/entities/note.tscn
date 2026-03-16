@@ -1,32 +1,34 @@
 [gd_scene format=3 uid="uid://cg1m7rfuweku5"]
 
+[ext_resource type="Script" uid="uid://ddrys0s6e23hv" path="res://entities/note.gd" id="1_4dkrx"]
 [ext_resource type="Texture2D" uid="uid://ck8nyix1ypcfp" path="res://assets/art/note/note-head.svg" id="1_gb8vh"]
 [ext_resource type="Texture2D" uid="uid://bb262mlalvpdp" path="res://assets/art/note/stem.svg" id="2_4dkrx"]
 [ext_resource type="Texture2D" uid="uid://dq1o3vrlwdhu4" path="res://assets/art/note/ledger-line.svg" id="3_tggj4"]
 
 [node name="Note" type="Node2D" unique_id=695582702]
+script = ExtResource("1_4dkrx")
 
 [node name="NoteHead" type="Sprite2D" parent="." unique_id=1577261905]
-position = Vector2(100.13499, 40.62)
+position = Vector2(0.13497162, -0.38000488)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("1_gb8vh")
 
 [node name="Stem" type="Sprite2D" parent="." unique_id=1387670507]
-position = Vector2(108.13499, 16.62)
+position = Vector2(8.134972, -24.380003)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("2_4dkrx")
 
 [node name="LedgerLine01" type="Sprite2D" parent="." unique_id=656219810]
-position = Vector2(100.354996, 40.999996)
+position = Vector2(0.35498047, -7.6293945e-06)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
 
 [node name="LedgerLine02" type="Sprite2D" parent="." unique_id=526764182]
-position = Vector2(100.355, 41.000004)
+position = Vector2(0.3549881, 0)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
 
 [node name="LedgerLine03" type="Sprite2D" parent="." unique_id=1118111545]
-position = Vector2(100.355, 41.000004)
+position = Vector2(0.3549881, 0)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
