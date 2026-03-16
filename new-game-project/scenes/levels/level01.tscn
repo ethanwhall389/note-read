@@ -15,6 +15,6 @@ wait_time = 2.0
 autostart = true
 
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=659702277]
-position = Vector2(107, 105)
+position = Vector2(728, 105)
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

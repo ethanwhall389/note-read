@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bb262mlalvpdp" path="res://assets/art/note/stem.svg" id="2_4dkrx"]
 [ext_resource type="Texture2D" uid="uid://dq1o3vrlwdhu4" path="res://assets/art/note/ledger-line.svg" id="3_tggj4"]
 
-[node name="Note" type="Node2D" unique_id=695582702]
+[node name="Note" type="CharacterBody2D" unique_id=340446195]
 script = ExtResource("1_4dkrx")
 
 [node name="NoteHead" type="Sprite2D" parent="." unique_id=1577261905]
