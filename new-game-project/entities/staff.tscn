@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bsjptrq6yr2us"]
+
+[ext_resource type="Texture2D" uid="uid://cp8rm71qbkgr1" path="res://assets/art/bass-clef.svg" id="1_panox"]
+
+[node name="Staff" type="Node2D" unique_id=210088103]
+position = Vector2(0, -1)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1553016195]
+position = Vector2(0, 16)
+points = PackedVector2Array(-7, 26, 736, 26)
+width = 1.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="." unique_id=1743195927]
+position = Vector2(0, 32)
+points = PackedVector2Array(-7, 26, 736, 26)
+width = 1.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="." unique_id=1820725288]
+position = Vector2(0, 48)
+points = PackedVector2Array(-7, 26, 736, 26)
+width = 1.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D4" type="Line2D" parent="." unique_id=1225985279]
+position = Vector2(0, 64)
+points = PackedVector2Array(-7, 26, 736, 26)
+width = 1.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D5" type="Line2D" parent="." unique_id=1291125742]
+position = Vector2(0, 80)
+points = PackedVector2Array(-7, 26, 736, 26)
+width = 1.5
+default_color = Color(0, 0, 0, 1)
+
+[node name="BassClef" type="Sprite2D" parent="." unique_id=405360142]
+position = Vector2(34.999996, 66)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_panox")

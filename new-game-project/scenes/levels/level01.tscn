@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cwwu5ccm52iou"]
+
+[ext_resource type="PackedScene" uid="uid://bsjptrq6yr2us" path="res://entities/staff.tscn" id="1_g0jr5"]
+[ext_resource type="PackedScene" uid="uid://c02x3lovllpck" path="res://systems/spawner.tscn" id="2_i4uh8"]
+[ext_resource type="PackedScene" uid="uid://cg1m7rfuweku5" path="res://entities/note.tscn" id="3_qwlqn"]
+
+[node name="Level01" type="Node2D" unique_id=462609379]
+
+[node name="Staff" parent="." unique_id=210088103 instance=ExtResource("1_g0jr5")]
+
+[node name="Spawner" parent="." unique_id=1663377936 instance=ExtResource("2_i4uh8")]
+
+[node name="Note" parent="." unique_id=695582702 instance=ExtResource("3_qwlqn")]
+position = Vector2(0, -16)
