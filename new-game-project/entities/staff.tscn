@@ -2,8 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cp8rm71qbkgr1" path="res://assets/art/bass-clef.svg" id="1_panox"]
 
-[node name="Staff" type="Node2D" unique_id=210088103]
-position = Vector2(0, -1)
+[node name="Staff" type="Area2D" unique_id=65945125]
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1553016195]
 position = Vector2(0, 16)

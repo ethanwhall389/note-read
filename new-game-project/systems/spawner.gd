@@ -10,6 +10,9 @@ var emphasis_indexes = []
 
 @export var spawn_point: Node2D
 
+#signal note_spawned(note_data: Dictionary)
+signal note_spawned(note: Node2D, note_data: Dictionary)
+
 func _ready() -> void:
 	get_notes_for_level()
 
@@ -64,6 +67,8 @@ func _on_timer_timeout() -> void:
 	add_child(note)
 	note.global_position = Vector2(spawn_x, spawn_y)
 	note.setup(note_data)
+	
+	note_spawned.emit(note, note_data)
 	
 	"""
 	### for testing all notes only

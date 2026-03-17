@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bb262mlalvpdp" path="res://assets/art/note/stem.svg" id="2_4dkrx"]
 [ext_resource type="Texture2D" uid="uid://dq1o3vrlwdhu4" path="res://assets/art/note/ledger-line.svg" id="3_tggj4"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4dkrx"]
+
 [node name="Note" type="CharacterBody2D" unique_id=340446195]
+modulate = Color(0, 0, 0, 1)
 script = ExtResource("1_4dkrx")
 
 [node name="NoteHead" type="Sprite2D" parent="." unique_id=1577261905]
@@ -57,3 +60,7 @@ visible = false
 position = Vector2(0.355, 40)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1431606688]
+shape = SubResource("CircleShape2D_4dkrx")
+debug_color = Color(0, 0.62218535, 0.55086833, 0.41960785)
