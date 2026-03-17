@@ -36,8 +36,8 @@ func get_notes_for_level():
 		level_notes.append(notes_registry[key])
 		
 	
-	print(level_notes)
-	print(emphasis_indexes)
+	#print(level_notes)
+	#print(emphasis_indexes)
 	
 
 

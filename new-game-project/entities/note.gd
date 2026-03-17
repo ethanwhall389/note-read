@@ -41,10 +41,11 @@ func setup(note_data: Dictionary) -> void:
 	# find out if stem is down
 		# if so, move it accordingly
 	if stem_up == true:
-		$Stem.position = Vector2(8.135, -24.38)
+		$Stem.position = Vector2(12.0, -28.0)
 	else:
-		$Stem.position = Vector2(-8.0, 24.0)
+		$Stem.position = Vector2(-12.0, 30.0)
 
+	$Label.text = note_data.name
 	
 	"""
 	for child in $LinesCrossThrough.get_children():
@@ -61,6 +62,9 @@ func setup(note_data: Dictionary) -> void:
 		main_ledger_offset_y = GameManager.Staff_Line_Height
 	"""
 	
-	#var current_x_pos = $LedgerLine02.global_position.x
-	#var current_y_pos = $LedgerLine02.global_position.y
-	#$LedgerLine02.global_position = Vector2(current_x_pos, current_y_pos + (main_ledger_offset_y * ledger_direction))
+func destroy_note() -> void:
+	#fade out
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 0.5) #0.5 = duration in seconds
+	#tween_callback fires after the tween finishes
+	tween.tween_callback(queue_free)

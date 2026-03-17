@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://1425knegw2y0" path="res://systems/gameplay_controller.tscn" id="3_g0jr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g0jr5"]
-size = Vector2(737, 155)
+size = Vector2(808, 324)
 
 [node name="Level01" type="Node2D" unique_id=462609379]
 
 [node name="Spawner" parent="." unique_id=1663377936 node_paths=PackedStringArray("spawn_point") instance=ExtResource("2_i4uh8")]
-position = Vector2(0, 45)
+position = Vector2(16, 61)
 spawn_point = NodePath("../Staff/SpawnPoint")
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=1694116599]
@@ -18,13 +18,13 @@ wait_time = 3.0
 autostart = true
 
 [node name="Staff" parent="." unique_id=210088103 instance=ExtResource("1_g0jr5")]
-position = Vector2(0, 44)
+position = Vector2(16, 60)
 
 [node name="SpawnPoint" type="Node2D" parent="Staff" unique_id=659702277]
-position = Vector2(728, 106)
+position = Vector2(744, 138)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Staff" unique_id=781037761]
-position = Vector2(407.5, 67.5)
+position = Vector2(462, 90)
 shape = SubResource("RectangleShape2D_g0jr5")
 
 [node name="GameplayController" parent="." unique_id=1336935545 node_paths=PackedStringArray("spawner") instance=ExtResource("3_g0jr5")]

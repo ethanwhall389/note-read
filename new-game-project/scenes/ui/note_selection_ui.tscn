@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c2v0ud36umcml"]
+
+[ext_resource type="Script" uid="uid://b25baoottvr65" path="res://scenes/ui/note_selection_ui.gd" id="1_4tu82"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_keoyt"]
+font_size = 69
+
+[node name="NoteSelectionUi" type="CanvasLayer" unique_id=387254789]
+script = ExtResource("1_4tu82")
+
+[node name="ButtonG" type="Node2D" parent="." unique_id=1418564452]
+position = Vector2(99, 823)
+
+[node name="ButtonG" type="Button" parent="ButtonG" unique_id=1085180663]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonG" unique_id=427933448]
+offset_right = 108.0
+offset_bottom = 107.0
+text = "G"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonG/ButtonG" to="." method="_on_button_g_pressed"]

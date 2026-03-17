@@ -23,6 +23,8 @@ GameManager="*uid://cywlgte7ex8n1"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [file_customization]
 
