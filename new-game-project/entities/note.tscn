@@ -18,17 +18,42 @@ position = Vector2(8.134972, -24.380003)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("2_4dkrx")
 
-[node name="LedgerLine01" type="Sprite2D" parent="." unique_id=656219810]
+[node name="LinesCrossThrough" type="Node2D" parent="." unique_id=1915200817]
+
+[node name="LedgerLine01" type="Sprite2D" parent="LinesCrossThrough" unique_id=656219810]
+visible = false
 position = Vector2(0.35498047, -7.6293945e-06)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
 
-[node name="LedgerLine02" type="Sprite2D" parent="." unique_id=526764182]
-position = Vector2(0.3549881, 0)
+[node name="LedgerLine02" type="Sprite2D" parent="LinesCrossThrough" unique_id=526764182]
+visible = false
+position = Vector2(0.355, 16)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")
 
-[node name="LedgerLine03" type="Sprite2D" parent="." unique_id=1118111545]
-position = Vector2(0.3549881, 0)
+[node name="LedgerLine03" type="Sprite2D" parent="LinesCrossThrough" unique_id=1118111545]
+visible = false
+position = Vector2(0.355, 32)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_tggj4")
+
+[node name="LinesOffset" type="Node2D" parent="." unique_id=1390907536]
+
+[node name="LedgerLine01" type="Sprite2D" parent="LinesOffset" unique_id=26759295]
+visible = false
+position = Vector2(0.355, 8)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_tggj4")
+
+[node name="LedgerLine02" type="Sprite2D" parent="LinesOffset" unique_id=2078036374]
+visible = false
+position = Vector2(0.355, 24)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_tggj4")
+
+[node name="LedgerLine03" type="Sprite2D" parent="LinesOffset" unique_id=804189222]
+visible = false
+position = Vector2(0.355, 40)
 scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_tggj4")

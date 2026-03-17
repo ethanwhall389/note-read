@@ -6,15 +6,17 @@
 [node name="Level01" type="Node2D" unique_id=462609379]
 
 [node name="Staff" parent="." unique_id=210088103 instance=ExtResource("1_g0jr5")]
+position = Vector2(0, 44)
 
-[node name="Spawner" parent="." unique_id=1663377936 node_paths=PackedStringArray("spawn_point") instance=ExtResource("2_i4uh8")]
+[node name="Spawner" parent="Staff" unique_id=1663377936 node_paths=PackedStringArray("spawn_point") instance=ExtResource("2_i4uh8")]
+position = Vector2(0, 1)
 spawn_point = NodePath("../SpawnPoint")
 
-[node name="Timer" type="Timer" parent="Spawner" unique_id=1694116599]
-wait_time = 2.0
+[node name="Timer" type="Timer" parent="Staff/Spawner" unique_id=1694116599]
+wait_time = 3.0
 autostart = true
 
-[node name="SpawnPoint" type="Node2D" parent="." unique_id=659702277]
-position = Vector2(728, 105)
+[node name="SpawnPoint" type="Node2D" parent="Staff" unique_id=659702277]
+position = Vector2(728, 106)
 
-[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Staff/Spawner/Timer" to="Staff/Spawner" method="_on_timer_timeout"]

@@ -39,16 +39,34 @@ func get_notes_for_level():
 
 
 func _on_timer_timeout() -> void:
+	
+
 	#get random note
 	var note_data = level_notes.pick_random()
 	print("chosen note: ", note_data)
 	
+
+	"""
+	### for testing all notes only
+	var note_data
+	note_data = level_notes[0]
+	###
+	"""
+
 	#add note scene
-	
 	var spawn_x = spawn_point.global_position.x
 	var spawn_y = spawn_point.global_position.y + (note_data["staff_position"] * GameManager.Staff_Line_Height)
+	
+		
+	
 	
 	var note = note_scene.instantiate()
 	add_child(note)
 	note.global_position = Vector2(spawn_x, spawn_y)
-	#note.setup(note_data)
+	note.setup(note_data)
+	
+	"""
+	### for testing all notes only
+	level_notes.pop_front()
+	###
+	"""
