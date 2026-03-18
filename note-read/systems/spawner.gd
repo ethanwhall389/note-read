@@ -6,6 +6,11 @@ var notes_registry = NotesRegistry.notes
 var level_notes = []
 var emphasis_indexes = []
 
+var difficulty_multiplier = GameManager.Difficulty_Levels[GameManager.current_difficulty]
+var timer_wait_time: float = GameManager.default_spawn_speed #/ difficulty_multiplier
+
+@onready var spawn_timer: Timer = $Timer
+
 @onready var note_scene = preload("res://entities/note.tscn")
 
 @export var spawn_point: Node2D
@@ -15,6 +20,9 @@ signal note_spawned(note: Node2D, note_data: Dictionary)
 
 func _ready() -> void:
 	get_notes_for_level()
+	print("timer wait ", timer_wait_time)
+	print(spawn_timer)
+	spawn_timer.set_wait_time(timer_wait_time)
 
 
 
@@ -28,6 +36,8 @@ func get_notes_for_level():
 			keys.append(item["note"])
 		elif item.has("emphasis_indexes"):
 			emphasis_indexes = item["emphasis_indexes"]
+			
+	print("emphasis_indexes: ", emphasis_indexes)
 	
 	#map the notes
 	

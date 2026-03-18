@@ -1,14 +1,15 @@
 extends CharacterBody2D
 
 var is_destroyed = false
-const SPEED = 100.0
+var difficulty_multiplier = GameManager.Difficulty_Levels[GameManager.current_difficulty]
+var speed = GameManager.default_note_speed * difficulty_multiplier
 
 signal note_destroyed(note: Node2D)
 
 
 
 func _physics_process(delta: float) -> void:
-	velocity.x = -SPEED
+	velocity.x = -speed
 	move_and_slide()
 
 func setup(note_data: Dictionary) -> void:

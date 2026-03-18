@@ -16,7 +16,7 @@ position = Vector2(16, 61)
 spawn_point = NodePath("../Staff/SpawnPoint")
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=1694116599]
-wait_time = 1.5
+wait_time = 2.0
 autostart = true
 
 [node name="Staff" parent="." unique_id=210088103 instance=ExtResource("1_g0jr5")]
