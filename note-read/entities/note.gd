@@ -1,15 +1,17 @@
 extends CharacterBody2D
 
-# func setup(note :Dictionary) -> void:
+var is_destroyed = false
+const SPEED = 100.0
 
-const SPEED = 90.0
+signal note_destroyed(note: Node2D)
+
+
 
 func _physics_process(delta: float) -> void:
 	velocity.x = -SPEED
 	move_and_slide()
 
 func setup(note_data: Dictionary) -> void:
-	print(note_data)
 	var ledger_through = note_data.ledger_through
 	var ledgers_above = note_data.ledgers_above
 	var ledgers = note_data.ledgers
@@ -46,25 +48,14 @@ func setup(note_data: Dictionary) -> void:
 		$Stem.position = Vector2(-12.0, 30.0)
 
 	$Label.text = note_data.name
-	
-	"""
-	for child in $LinesCrossThrough.get_children():
-		print(child.visibility)
-	
-	# flip which direction the ledgers go
-	if ledgers_above > 0:
-		ledger_direction = -1
-	
-	
-	if ledger_through == true:
-		ledgers[0].visible = true
-	else:
-		main_ledger_offset_y = GameManager.Staff_Line_Height
-	"""
-	
-func destroy_note() -> void:
+
+func destroy() -> void:
+	if is_destroyed:
+		return
+	is_destroyed = true
+	note_destroyed.emit(self)
 	#fade out
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 0.5) #0.5 = duration in seconds
 	#tween_callback fires after the tween finishes
-	tween.tween_callback(queue_free)
+	tween.tween_callback(self.queue_free)
