@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c02x3lovllpck" path="res://systems/spawner.tscn" id="2_i4uh8"]
 [ext_resource type="PackedScene" uid="uid://1425knegw2y0" path="res://systems/gameplay_controller.tscn" id="3_g0jr5"]
 [ext_resource type="PackedScene" uid="uid://c2v0ud36umcml" path="res://scenes/ui/note_selection_ui.tscn" id="4_i4uh8"]
+[ext_resource type="PackedScene" uid="uid://ddnm1v5o17e6o" path="res://scenes/ui/in_game_ui.tscn" id="5_qwlqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g0jr5"]
 size = Vector2(768, 324)
@@ -30,9 +31,14 @@ shape = SubResource("RectangleShape2D_g0jr5")
 
 [node name="GameplayController" parent="." unique_id=1336935545 node_paths=PackedStringArray("spawner", "note_selection_ui") instance=ExtResource("3_g0jr5")]
 spawner = NodePath("../Spawner")
-note_selection_ui = NodePath("../NoteSelectionUi")
+note_selection_ui = NodePath("../UI/NoteSelectionUi")
 
-[node name="NoteSelectionUi" parent="." unique_id=387254789 instance=ExtResource("4_i4uh8")]
+[node name="UI" type="Node" parent="." unique_id=2080093714]
+
+[node name="NoteSelectionUi" parent="UI" unique_id=387254789 instance=ExtResource("4_i4uh8")]
+
+[node name="InGameUi" parent="UI" unique_id=1361146463 node_paths=PackedStringArray("gameplay_controller") instance=ExtResource("5_qwlqn")]
+gameplay_controller = NodePath("../../GameplayController")
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
 [connection signal="body_exited" from="Staff" to="GameplayController" method="_on_staff_body_exited"]

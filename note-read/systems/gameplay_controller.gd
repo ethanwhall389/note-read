@@ -5,6 +5,8 @@ extends Node2D
 var spawned_notes = []
 var current_note_index = 0
 
+signal score_updated(new_score: int)
+
 
 func _ready() -> void:
 	spawner.note_spawned.connect(_on_note_spawned)
@@ -25,9 +27,14 @@ func check_guess(note_guess: String) -> void:
 	
 	if note_guess == current_note.name:
 		current_note.note.modulate = Color("GREEN")
+		GameManager.score += 1
+		score_updated.emit(GameManager.score)
 		#increase score?
 	else:
 		#penalize?
+		if GameManager.score > 0:
+			GameManager.score -= 1
+			score_updated.emit(GameManager.score)
 		current_note.note.modulate = Color("RED")
 	
 	current_note.note.destroy()

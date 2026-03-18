@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddnm1v5o17e6o"]
+
+[ext_resource type="Script" uid="uid://bxiwcuu8kuc3u" path="res://scenes/ui/in_game_ui.gd" id="1_uyty4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4db6k"]
+font_size = 60
+
+[node name="InGameUi" type="CanvasLayer" unique_id=1361146463]
+script = ExtResource("1_uyty4")
+
+[node name="Score" type="Node2D" parent="." unique_id=1861694483]
+position = Vector2(323, 0)
+
+[node name="LabelScore" type="Label" parent="Score" unique_id=807105740]
+offset_right = 71.0
+offset_bottom = 70.0
+text = "0"
+label_settings = SubResource("LabelSettings_4db6k")
+horizontal_alignment = 1
+vertical_alignment = 1

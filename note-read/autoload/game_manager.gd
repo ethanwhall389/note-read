@@ -4,6 +4,8 @@ var current_level = 3
 
 const Staff_Line_Height = 12.0
 
+var score = 0
+
 const Levels = {
 	1: [{"note": "C1"}, {"note": "D1"}, {"note": "E1"}, {"note": "F1"}, {"note": "G1"}, {"emphasis_indexes": [1]}],
 	2: [{"note": "G1"}, {"note": "C2"}, {"note": "B1"}, {"emphasis": ["B1"]}],
