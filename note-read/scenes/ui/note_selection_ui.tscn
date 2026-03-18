@@ -9,16 +9,106 @@ font_size = 69
 script = ExtResource("1_4tu82")
 
 [node name="ButtonG" type="Node2D" parent="." unique_id=1418564452]
-position = Vector2(99, 823)
+position = Vector2(85, 823)
 
-[node name="ButtonG" type="Button" parent="ButtonG" unique_id=1085180663]
+[node name="ButtonG" type="Button" parent="ButtonG" unique_id=1085180663 groups=["note_buttons"]]
 offset_right = 109.0
 offset_bottom = 104.0
 
 [node name="Label" type="Label" parent="ButtonG" unique_id=427933448]
-offset_right = 108.0
-offset_bottom = 107.0
+offset_right = 109.0
+offset_bottom = 104.0
 text = "G"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonA" type="Node2D" parent="." unique_id=901833920]
+position = Vector2(293, 823)
+
+[node name="ButtonA" type="Button" parent="ButtonA" unique_id=1823444424 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonA" unique_id=1696958794]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "A"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonB" type="Node2D" parent="." unique_id=1315883645]
+position = Vector2(500, 823)
+
+[node name="ButtonB" type="Button" parent="ButtonB" unique_id=1900554260 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonB" unique_id=1731423904]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "B"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonC" type="Node2D" parent="." unique_id=638933865]
+position = Vector2(85, 980)
+
+[node name="ButtonC" type="Button" parent="ButtonC" unique_id=819873490 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonC" unique_id=1767609410]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "C"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonD" type="Node2D" parent="." unique_id=218213479]
+position = Vector2(293, 980)
+
+[node name="ButtonD" type="Button" parent="ButtonD" unique_id=1528981576 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonD" unique_id=1939100831]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "D"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonE" type="Node2D" parent="." unique_id=1780524179]
+position = Vector2(500, 980)
+
+[node name="ButtonE" type="Button" parent="ButtonE" unique_id=33633949 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonE" unique_id=1054409111]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "E"
+label_settings = SubResource("LabelSettings_keoyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonF" type="Node2D" parent="." unique_id=145834408]
+position = Vector2(85, 1133)
+
+[node name="ButtonF" type="Button" parent="ButtonF" unique_id=1777885353 groups=["note_buttons"]]
+offset_right = 109.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="ButtonF" unique_id=1985823351]
+offset_right = 109.0
+offset_bottom = 104.0
+text = "F"
 label_settings = SubResource("LabelSettings_keoyt")
 horizontal_alignment = 1
 vertical_alignment = 1

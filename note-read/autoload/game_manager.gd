@@ -1,6 +1,6 @@
 extends Node
 
-var current_level = 5
+var current_level = 3
 
 const Staff_Line_Height = 12.0
 
