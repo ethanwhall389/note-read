@@ -1,7 +1,7 @@
 extends Node
 
 var current_level = 1
-var current_difficulty = "advanced"
+var current_difficulty = "beginner"
 
 var default_note_speed: float = 90.0
 var default_spawn_speed: float = 2.0
@@ -22,5 +22,5 @@ const Levels = {
 const Difficulty_Levels = {
 	"beginner": 1.0,
 	"intermediate": 1.5,
-	"advanced": 2.0
+	"advanced": 2.2
 }

@@ -4,6 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4db6k"]
 font_size = 60
+font_color = Color(0, 0, 0, 1)
 
 [node name="InGameUi" type="CanvasLayer" unique_id=1361146463]
 script = ExtResource("1_uyty4")

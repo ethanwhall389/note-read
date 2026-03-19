@@ -7,7 +7,7 @@ var level_notes = []
 var emphasis_indexes = []
 
 var difficulty_multiplier = GameManager.Difficulty_Levels[GameManager.current_difficulty]
-var timer_wait_time: float = GameManager.default_spawn_speed #/ difficulty_multiplier
+var timer_wait_time: float = GameManager.default_spawn_speed / difficulty_multiplier
 
 @onready var spawn_timer: Timer = $Timer
 
@@ -21,7 +21,6 @@ signal note_spawned(note: Node2D, note_data: Dictionary)
 func _ready() -> void:
 	get_notes_for_level()
 	print("timer wait ", timer_wait_time)
-	print(spawn_timer)
 	spawn_timer.set_wait_time(timer_wait_time)
 
 
