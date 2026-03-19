@@ -11,6 +11,8 @@ signal score_updated(new_score: int)
 func _ready() -> void:
 	spawner.note_spawned.connect(_on_note_spawned)
 	note_selection_ui.note_button_selected.connect(_on_note_button_selected)
+	print("Current level: ", GameManager.current_level)
+	print("Current Difficulty: ", GameManager.current_difficulty)
 	
 
 func _on_note_spawned(note: Node2D, note_data: Dictionary) -> void:
@@ -45,7 +47,10 @@ func _on_staff_body_exited(note: Node2D) -> void:
 
 func _on_note_destroyed(note) -> void:
 	current_note_index += 1
-	highlight_current_note()
+	if current_note_index >= spawned_notes.size():
+		return
+	else:
+		highlight_current_note()
 
 func highlight_current_note() -> void:
 	spawned_notes[current_note_index].note.modulate = Color("#000000")

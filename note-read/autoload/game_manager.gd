@@ -24,3 +24,23 @@ const Difficulty_Levels = {
 	"intermediate": 1.5,
 	"advanced": 2.2
 }
+
+func reset_score() -> void:
+	score = 0
+
+func start_game(level) -> void:
+	current_level = level
+	reset_score()
+	get_tree().change_scene_to_file("res://scenes/gameplay/game.tscn")
+	
+func end_game() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu/game_over.tscn")
+
+func go_to_level_select() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu/level_select.tscn")
+
+func go_to_options() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu/options.tscn")
+
+func go_to_main_menu() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")

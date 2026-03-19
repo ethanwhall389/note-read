@@ -9,3 +9,8 @@ func _ready() -> void:
 
 func _on_score_updated(new_score):
 	$Score/LabelScore.text = str(new_score)
+
+
+func _on_button_end_pressed() -> void:
+	print("end button pressed")
+	GameManager.end_game()

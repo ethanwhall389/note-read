@@ -6,6 +6,36 @@
 font_size = 60
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyty4"]
+bg_color = Color(0.9122889, 0.9122889, 0.9122887, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.44136548, 0.4413655, 0.4413655, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4db6k"]
+bg_color = Color(0.717965, 0.7179638, 0.71796405, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.44136548, 0.4413655, 0.4413655, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eeonk"]
+bg_color = Color(0.8352941, 0.8352941, 0.8352941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.44136548, 0.4413655, 0.4413655, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(0, 10)
+
 [node name="InGameUi" type="CanvasLayer" unique_id=1361146463]
 script = ExtResource("1_uyty4")
 
@@ -19,3 +49,28 @@ text = "0"
 label_settings = SubResource("LabelSettings_4db6k")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ButtonEnd" type="Button" parent="." unique_id=176169219]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -119.0
+offset_right = -48.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.15487579, 0.15487614, 0.15487579, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyty4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4db6k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eeonk")
+text = "End Game"
+
+[connection signal="pressed" from="ButtonEnd" to="." method="_on_button_end_pressed"]
